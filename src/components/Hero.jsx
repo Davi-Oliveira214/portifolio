@@ -6,7 +6,7 @@ export default function Hero() {
                Davi De Jesus
             </h1>
             <p className='text-3xl font-bold text-hunter-green-700'>
-               FullStack
+               Estudante FullStack
             </p>
          </div>
 

@@ -17,11 +17,7 @@ function CardsInfo({ itens, click }) {
                      {i.titulo}
                   </h3>
                   <div className='flex flex-col gap-2 text-center text-extra-branco'>
-                     <img
-                        src={i.imagem}
-                        alt=''
-                        className='w-full object-cover'
-                     />
+                     <img src={i.imagem} alt='' className='w-full h-38' />
                      <h4 className='text-2xl font-bold'>{i.subtitulo}</h4>
                      <p className='text-lg px-1'>{i.texto}</p>
                   </div>
