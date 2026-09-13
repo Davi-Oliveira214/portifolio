@@ -4,7 +4,7 @@ function CardsInfo({ itens, click }) {
    return (
       <div
          onClick={click}
-         className='fixed flex bg-[rgba(2,2,2,.2)] items-center w-full h-full top-0 left-0 px-4 backdrop-blur-md'
+         className='fixed flex bg-[rgba(2,2,2,.2)] items-center w-full h-full top-0 left-0 px-4 backdrop-blur-md z-10'
       >
          <div className='flex flex-row gap-20 overflow-x-auto scrollbar-none scroll-smooth snap-x snap-mandatory p-[0_6%]'>
             {itens.map((i) => (
