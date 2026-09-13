@@ -34,7 +34,7 @@ export default function SobreSessao() {
                   onClick={() => isTexto(!texto)}
                />
             </div>
-            <div className='flex gap-5 p-[8px_10%] max-w-full overflow-scroll scroll-smooth scrollbar-none snap-x snap-mandatory rounded-2xl lg:border-2 lg:justify-center lg:border-deep-space-blue-900'>
+            <div className='flex gap-5 p-[8px_10%] max-w-full overflow-scroll scroll-smooth scrollbar-none snap-x snap-mandatory rounded-2xl lg:border-2 lg:p-[5px_10px] lg:border-deep-space-blue-900'>
                {sobre.map((iten) => (
                   <CardSobre
                      key={iten.categoria}

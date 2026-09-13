@@ -28,6 +28,9 @@ function CardsInfo({ itens, click }) {
                </div>
             ))}
          </div>
+         <p className='absolute top-[75%] md:top-[80%] text-extra-branco w-full text-center left-0 text-lg'>
+            Arraste para os lados
+         </p>
       </div>
    )
 }
