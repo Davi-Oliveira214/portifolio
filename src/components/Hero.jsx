@@ -2,10 +2,10 @@ export default function Hero() {
    return (
       <div className='flex relative'>
          <div className='flex flex-col justify-center h-[45vh] w-full px-3 md:w-[90%] lg:w-[95%] rounded-br-full bg-deep-space-blue-900'>
-            <h1 className='text-5xl text-extra-branco font-bold italic'>
+            <h1 className='text-5xl lg:text-7xl text-extra-branco font-bold italic'>
                Davi De Jesus
             </h1>
-            <p className='text-3xl font-bold text-hunter-green-700'>
+            <p className='text-3xl lg:text-4xl font-bold text-hunter-green-700'>
                Estudante FullStack
             </p>
          </div>

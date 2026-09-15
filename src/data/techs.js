@@ -7,6 +7,8 @@ import postgreSql from '../assets/svg/postgresql.svg'
 import reactjs from '../assets/svg/react.svg'
 import tailwindcss from '../assets/svg/tailwindcss.svg'
 import spring from '../assets/svg/spring.svg'
+import git from '../assets/svg/git.svg'
+import gitHub from '../assets/svg/gitHub.svg'
 
 export const linguagens = [
    { id: 1, nome: 'Java', img: java },
@@ -18,4 +20,6 @@ export const linguagens = [
    { id: 7, nome: 'React JS', img: reactjs },
    { id: 8, nome: 'Tailwindcss', img: tailwindcss },
    { id: 9, nome: 'Spring boot', img: spring },
+   { id: 10, nome: 'Git', img: git },
+   { id: 11, nome: 'GitHub', img: gitHub },
 ]

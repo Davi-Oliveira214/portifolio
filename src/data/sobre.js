@@ -1,4 +1,3 @@
-import imagem from '../assets/img/image.png'
 import { linguagens } from './techs'
 
 export const sobre = [
@@ -7,25 +6,25 @@ export const sobre = [
       itens: [
          {
             titulo: 'Livros',
-            imagem: '',
+            imagem: linguagens[0].img,
             subtitulo: 'Leitura',
             texto: 'Senhor dos Anéis, A Queda de Gondolin, Petrus Logus, Crime e Castigo.',
          },
          {
             titulo: 'Jogos',
-            imagem: '',
+            imagem: linguagens[0].img,
             subtitulo: 'Jogar',
             texto: 'Gosto de jogar nas horas vagas, principalmente jogos que envolvem estratégia e desafios.',
          },
          {
             titulo: 'Tecnologia',
-            imagem: '',
+            imagem: linguagens[0].img,
             subtitulo: 'Programação',
             texto: 'Tenho interesse por tecnologia e gosto de aprender novas ferramentas e linguagens, além de criar meus próprios aplicativos e sites.',
          },
          {
             titulo: 'Música',
-            imagem: '',
+            imagem: linguagens[0].img,
             subtitulo: 'Ouvir música',
             texto: 'Gosto de ouvir música durante meu tempo livre e enquanto realizo atividades ou programo.',
          },
@@ -79,13 +78,13 @@ export const sobre = [
          },
          {
             titulo: 'Git',
-            imagem: '',
+            imagem: linguagens[9].img,
             subtitulo: 'Versionamento',
             texto: 'Utilização do Git para controle de versão dos projetos.',
          },
          {
             titulo: 'GitHub',
-            imagem: '',
+            imagem: linguagens[10].img,
             subtitulo: 'Projetos',
             texto: 'Utilização do GitHub para armazenar e compartilhar projetos.',
          },

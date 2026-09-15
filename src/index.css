@@ -13,6 +13,7 @@
    --color-dark-slate-grey-900: #141f1e;
    --color-dark-slate-grey-950: #0e1615;
 
+   --color-deep-space-blue-700: #4584b3;
    --color-deep-space-blue-800: #1f517a;
    --color-deep-space-blue-900: #0f273b;
    --color-deep-space-blue-950: #07131c;
@@ -33,4 +34,8 @@
    }
 
    --animate-scrollInfinito: scroll-infinito 13s linear infinite;
+}
+
+body::-webkit-scrollbar {
+   scrollbar-width: none;
 }

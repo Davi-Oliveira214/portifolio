@@ -1,14 +1,14 @@
-import Skills from './components/SkillsSessao.jsx'
+import Skills from './components/Sessoes/SkillsSessao.jsx'
 import Hero from './components/Hero.jsx'
-import SobreSessao from './components/SobreSessao.jsx'
-import Projetos from './components/Projetos.jsx'
+import Sobre from './components/Sessoes/SobreSessao.jsx'
+import Projetos from './components/Sessoes/ProjetosSessao.jsx'
 
 export default function App() {
    return (
       <>
          <Hero />
          <Skills />
-         <SobreSessao />
+         <Sobre />
          <Projetos />
       </>
    )

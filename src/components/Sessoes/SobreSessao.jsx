@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import foto from '../assets/img/foto.jpg'
-import CardSobre from '../components/CardSobre.jsx'
-import Titulo from '../components/Titulos.jsx'
-import { sobre } from '../data/sobre'
+import foto from '../../assets/img/foto.jpg'
+import CardSobre from '../cards/CardSobre.jsx'
+import Titulo from '../Titulos.jsx'
+import { sobre } from '../../data/sobre.js'
 
 export default function SobreSessao() {
    const [texto, isTexto] = useState(false)
@@ -34,7 +34,7 @@ export default function SobreSessao() {
                   onClick={() => isTexto(!texto)}
                />
             </div>
-            <div className='flex gap-5 p-[8px_10%] max-w-full overflow-scroll scroll-smooth scrollbar-none snap-x snap-mandatory rounded-2xl lg:border-2 lg:p-[5px_10px] lg:border-deep-space-blue-900'>
+            <div className='flex gap-5 p-[8px_10%] max-w-full overflow-scroll scroll-smooth scrollbar-none snap-x snap-mandatory rounded-2xl lg:border-[3px] lg:p-[8px_14px] lg:border-deep-space-blue-900'>
                {sobre.map((iten) => (
                   <CardSobre
                      key={iten.categoria}

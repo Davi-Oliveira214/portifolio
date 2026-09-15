@@ -1,6 +1,6 @@
-import Linguagem from '../components/CardLinguagem'
-import { linguagens } from '../data/techs'
-import TituloSessao from './Titulos'
+import Linguagem from '../cards/CardLinguagem'
+import { linguagens } from '../../data/techs'
+import TituloSessao from '../Titulos'
 
 export default function SkillsSessao({ titulo = 'Conhecimentos' }) {
    return (
