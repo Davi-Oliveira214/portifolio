@@ -8,7 +8,7 @@ import reactjs from '../assets/svg/react.svg'
 import tailwindcss from '../assets/svg/tailwindcss.svg'
 import spring from '../assets/svg/spring.svg'
 import git from '../assets/svg/git.svg'
-import gitHub from '../assets/svg/gitHub.svg'
+import gitHub from '../assets/svg/github.svg'
 
 export const linguagens = [
    { id: 1, nome: 'Java', img: java },
