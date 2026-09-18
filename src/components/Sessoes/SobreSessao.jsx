@@ -12,7 +12,7 @@ export default function SobreSessao() {
          <div className='flex flex-col w-full gap-3 lg:justify-center'>
             <div className='flex md:flex-row justify-between relative rounded-2xl overflow-hidden border-2 border-deep-space-blue-800 md:border-0'>
                <div
-                  className={`${texto ? 'flex absolute inset-0' : 'hidden'} md:flex flex-col items-center justify-center gap-10 w-full md:w-[55%] min-h-full p-6 md:p-8 bg-deep-space-blue-950/95 md:bg-deep-space-blue-950/90 text-sm text-justify text-extra-branco backdrop-blur-sm rounded-2xl shadow-lg cursor-pointer transition-all duration-300 md:pointer-events-none`}
+                  className={`${texto ? 'flex absolute inset-0' : 'hidden'} md:flex flex-col items-center justify-center gap-10 w-full md:w-[55%] min-h-full p-6 md:p-8 bg-deep-space-blue-950/95 md:bg-deep-space-blue-950/90 text-md text-center text-extra-branco backdrop-blur-sm rounded-2xl shadow-lg cursor-pointer transition-all duration-300 md:pointer-events-none`}
                   onClick={() => isTexto(!texto)}
                >
                   <p>
@@ -34,7 +34,7 @@ export default function SobreSessao() {
                   onClick={() => isTexto(!texto)}
                />
             </div>
-            <div className='flex gap-5 p-[8px_10%] max-w-full overflow-scroll scroll-smooth scrollbar-none snap-x snap-mandatory rounded-2xl lg:border-[3px] lg:p-[8px_14px] lg:border-deep-space-blue-900'>
+            <div className='flex gap-5 p-[8px_14px] max-w-full overflow-scroll scroll-smooth scrollbar-none snap-x snap-mandatory rounded-2xl lg:border-[3px] lg:border-deep-space-blue-900'>
                {sobre.map((iten) => (
                   <CardSobre
                      key={iten.categoria}

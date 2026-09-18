@@ -13,7 +13,7 @@ export default function CardProjeto({
    return (
       <>
          <div
-            className={`w-97 min-h-95 rounded-2xl overflow-hidden bg-charcoal-blue-900 text-extra-branco snap-center border-4 border-deep-space-blue-800`}
+            className={`w-97 min-h-95 rounded-2xl overflow-hidden bg-charcoal-blue-900 text-extra-branco snap-center border-[3px] border-deep-space-blue-800`}
             onClick={() => setImage(!isImage)}
          >
             <div

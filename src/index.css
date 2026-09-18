@@ -33,7 +33,7 @@
       }
    }
 
-   --animate-scrollInfinito: scroll-infinito 13s linear infinite;
+   --animate-scrollInfinito: scroll-infinito 20s linear infinite;
 }
 
 body::-webkit-scrollbar {

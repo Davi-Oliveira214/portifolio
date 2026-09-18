@@ -41,7 +41,7 @@ export default function CardSobre({ itens, texto }) {
    return (
       <>
          <div
-            className={`flex flex-col min-w-90 max-w-130 min-h-90 bg-charcoal-blue-900 rounded-2xl snap-center cursor-pointer border-4 border-deep-space-blue-800`}
+            className={`flex flex-col min-w-90 max-w-130 min-h-90 bg-charcoal-blue-900 rounded-2xl snap-center cursor-pointer border-[3px] border-deep-space-blue-800`}
             onClick={() => isAtivo(!ativo)}
          >
             <h3 className='capitalize flex justify-center items-center w-full h-full text-6xl text-deep-space-blue-700 font-bold'>
