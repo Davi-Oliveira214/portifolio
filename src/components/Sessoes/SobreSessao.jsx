@@ -10,9 +10,9 @@ export default function SobreSessao() {
       <div className='w-full mt-10 px-4 py-2'>
          <Titulo texto={'Sobre'} />
          <div className='flex flex-col w-full gap-3 lg:justify-center'>
-            <div className='flex md:flex-row justify-between relative rounded-2xl overflow-hidden'>
+            <div className='flex md:flex-row justify-between relative rounded-2xl overflow-hidden border-2 border-deep-space-blue-800 md:border-0'>
                <div
-                  className={`${texto ? 'flex absolute inset-0' : 'hidden'} md:flex flex-col items-center justify-center gap-10 w-full md:w-[55%] min-h-full p-6 md:p-8 bg-deep-space-blue-950/95 md:bg-deep-space-blue-950/90 text-sm text-justify text-extra-branco backdrop-blur-sm border border-deep-space-blue-800 rounded-2xl shadow-lg cursor-pointer transition-all duration-300 md:pointer-events-none`}
+                  className={`${texto ? 'flex absolute inset-0' : 'hidden'} md:flex flex-col items-center justify-center gap-10 w-full md:w-[55%] min-h-full p-6 md:p-8 bg-deep-space-blue-950/95 md:bg-deep-space-blue-950/90 text-sm text-justify text-extra-branco backdrop-blur-sm rounded-2xl shadow-lg cursor-pointer transition-all duration-300 md:pointer-events-none`}
                   onClick={() => isTexto(!texto)}
                >
                   <p>

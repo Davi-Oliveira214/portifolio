@@ -13,13 +13,15 @@ export default function CardProjeto({
    return (
       <>
          <div
-            className={`w-97 min-h-95 rounded-2xl overflow-hidden bg-charcoal-blue-900 text-extra-branco snap-center`}
+            className={`w-97 min-h-95 rounded-2xl overflow-hidden bg-charcoal-blue-900 text-extra-branco snap-center border-4 border-deep-space-blue-800`}
             onClick={() => setImage(!isImage)}
          >
             <div
                className={`${!isImage ? 'flex' : 'hidden'} flex-col h-full justify-between gap-7 px-3 py-2`}
             >
-               <h3 className='text-center text-3xl italic'>{titulo}</h3>
+               <h3 className='text-center text-3xl font-bold italic'>
+                  {titulo}
+               </h3>
                <p
                   className='text-xl h-28 overflow-y-scroll scrollbar-thumb-deep-space-blue-950 scrollbar-thin'
                   onClick={(e) => e.stopPropagation()}
@@ -81,7 +83,7 @@ function Link({ caminho, texto }) {
 function Info({ tipo, texto }) {
    return (
       <p className='capitalize'>
-         <span className='font-bold'>{tipo + ': '}</span>
+         <span className='font-bold'>{tipo} </span>
          {texto}
       </p>
    )

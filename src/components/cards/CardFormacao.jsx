@@ -1,0 +1,84 @@
+export default function CardFormacao({ infomacoes }) {
+   const { instituicao, periodo, curso, inicio, fim, descricao, aprendizados } =
+      infomacoes
+
+   return (
+      <details className='flex flex-col w-full rounded-2xl border-[3px] border-deep-space-blue-800 overflow-hidden bg-deep-space-blue-900 text-extra-branco snap-center'>
+         <summary className='list-none flex flex-col px-3 py-2 bg-charcoal-blue-900 cursor-pointer'>
+            <div className='flex justify-between'>
+               <PeriodoFormacao data={periodo} />
+               <Status fim={fim} />
+            </div>
+            <NomeInstituicao instituicao={instituicao} />
+            <NomeCurso curso={curso} />
+         </summary>
+         <div className='flex flex-col gap-4 px-4 py-3'>
+            <DescricaoFormacao texto={descricao} />
+            <div className='flex flex-wrap gap-y-2.5 gap-x-4 justify-center'>
+               {aprendizados.map((i) => (
+                  <TagAprendizado key={`id-${i}`} texto={i} />
+               ))}
+            </div>
+         </div>
+      </details>
+   )
+}
+
+function Status({ fim }) {
+   let texto, style
+
+   let agora = new Date()
+   const anoAtual = agora.getFullYear()
+   const mesAtual = String(agora.getMonth() + 1).padStart(2, '0')
+   const dataAtual = `${anoAtual}-${mesAtual}`
+
+   const isConcluido = dataAtual >= fim
+
+   if (isConcluido) {
+      texto = 'concluido'
+      style =
+         'text-hunter-green-700 bg-[rgba(36,66,54,0.2)] border-hunter-green-800'
+   } else {
+      texto = 'cursando'
+      style =
+         'text-charcoal-blue-950 bg-[rgba(255,255,255,0.2)] border-charcoal-blue-950'
+   }
+
+   return (
+      <p
+         className={`capitalize font-bold p-[3px_7px] border-[3px] rounded-2xl ${style}`}
+      >
+         {texto}
+      </p>
+   )
+}
+
+function PeriodoFormacao({ data }) {
+   return (
+      <p className='w-max p-[3px_7px] text-sm text-deep-space-blue-700 bg-deep-space-blue-900 border-[3px] border-deep-space-blue-950 rounded-2xl mb-1'>
+         {data}
+      </p>
+   )
+}
+
+function DescricaoFormacao({ texto }) {
+   return <p className='wrap-break-word'>{texto}</p>
+}
+
+function NomeInstituicao({ instituicao }) {
+   return <p className='font-bold text-lg'>{instituicao}</p>
+}
+
+function NomeCurso({ curso }) {
+   return (
+      <p className='text-sm text-deep-space-blue-700 font-medium'>{curso}</p>
+   )
+}
+
+function TagAprendizado({ texto }) {
+   return (
+      <p className='w-max capitalize font-bold bg-[rgba(12,23,19,0.3)] border-2 border-deep-space-blue-800 px-2 py-1 rounded-2xl text-center'>
+         {texto}
+      </p>
+   )
+}

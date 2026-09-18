@@ -1,6 +1,6 @@
 import Titulo from '../Titulos'
 import { projetos } from '../../data/projetos'
-import CardProjeto from '../cards/CArdProjeto'
+import CardProjeto from '../cards/CardProjeto'
 
 export default function Projetos() {
    return (
