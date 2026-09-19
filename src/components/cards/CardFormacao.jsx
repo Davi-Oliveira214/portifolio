@@ -1,12 +1,12 @@
 export default function CardFormacao({ infomacoes }) {
-   const { instituicao, periodo, curso, inicio, fim, descricao, aprendizados } =
+   const { instituicao, curso, inicio, fim, descricao, aprendizados } =
       infomacoes
 
    return (
       <details className='flex flex-col w-full rounded-2xl border-[3px] border-deep-space-blue-800 overflow-hidden bg-deep-space-blue-900 text-extra-branco snap-center'>
          <summary className='list-none flex flex-col px-3 py-2 bg-charcoal-blue-900 cursor-pointer'>
             <div className='flex justify-between'>
-               <PeriodoFormacao data={periodo} />
+               <PeriodoFormacao inicio={inicio} fim={fim} />
                <Status fim={fim} />
             </div>
             <NomeInstituicao instituicao={instituicao} />
@@ -25,38 +25,44 @@ export default function CardFormacao({ infomacoes }) {
 }
 
 function Status({ fim }) {
-   let texto, style
-
    let agora = new Date()
-   const anoAtual = agora.getFullYear()
-   const mesAtual = String(agora.getMonth() + 1).padStart(2, '0')
-   const dataAtual = `${anoAtual}-${mesAtual}`
+   const dataAtual = `${agora.getFullYear()}-${String(agora.getMonth() + 1).padStart(2, '0')}`
 
-   const isConcluido = dataAtual >= fim
+   const concluido = dataAtual >= fim
 
-   if (isConcluido) {
-      texto = 'concluido'
-      style =
-         'text-hunter-green-700 bg-[rgba(36,66,54,0.2)] border-hunter-green-800'
-   } else {
-      texto = 'cursando'
-      style =
-         'text-charcoal-blue-950 bg-[rgba(255,255,255,0.2)] border-charcoal-blue-950'
-   }
+   let style = concluido
+      ? 'text-hunter-green-700 bg-[rgba(36,66,54,0.2)] border-hunter-green-800'
+      : 'text-charcoal-blue-950 bg-[rgba(255,255,255,0.2)] border-charcoal-blue-950'
 
    return (
       <p
          className={`capitalize font-bold p-[3px_7px] border-[3px] rounded-2xl ${style}`}
       >
-         {texto}
+         {concluido ? 'concluido' : 'cursando'}
       </p>
    )
 }
 
-function PeriodoFormacao({ data }) {
+function PeriodoFormacao({ inicio, fim }) {
+   const inicioData = new Date(`${inicio}-01T00:00:00`).toLocaleDateString(
+      'pt-BR',
+      {
+         month: 'numeric',
+         year: 'numeric',
+      },
+   )
+
+   const fimData = new Date(`${inicio}-01T00:00:00`).toLocaleDateString(
+      'pt-BR',
+      {
+         month: 'numeric',
+         year: 'numeric',
+      },
+   )
+
    return (
       <p className='w-max p-[3px_7px] text-sm text-deep-space-blue-700 bg-deep-space-blue-900 border-[3px] border-deep-space-blue-950 rounded-2xl mb-1'>
-         {data}
+         {`${inicioData} - ${fimData}`}
       </p>
    )
 }

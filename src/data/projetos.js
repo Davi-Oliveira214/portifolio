@@ -2,14 +2,15 @@ import livraria from '../assets/img/livraria.png'
 
 export const projetos = [
    {
-      projeto: 'Livraria',
+      projeto: 'Livraria-Java',
 
       sobre: {
-         titulo: 'Livraria',
+         titulo: 'Livraria Back-End',
 
-         sobre: 'Projeto de uma livraria desenvolvido com uma aplicação frontend em React e uma API backend utilizando Spring Boot. O projeto foi desenvolvido com o objetivo de praticar a integração entre frontend e backend, trabalhando com requisições à API e gerenciamento das informações da aplicação.',
+         descricao:
+            'Projeto de uma livraria desenvolvido com uma aplicação frontend em React e uma API backend utilizando Spring Boot. O projeto foi desenvolvido com o objetivo de praticar a integração entre frontend e backend, trabalhando com requisições à API e gerenciamento das informações da aplicação.',
 
-         liguagens: 'Java, JavaScript, React, Spring Boot',
+         linguagem: ['Java', 'Spring Boot'],
 
          ferramentas: 'Git, GitHub, IntelliJ IDEA',
 
@@ -17,7 +18,7 @@ export const projetos = [
 
          imagem: livraria,
 
-         link: '',
+         visita: '',
       },
    },
 ]

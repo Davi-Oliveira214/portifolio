@@ -1,4 +1,4 @@
-import { contato } from '../data/contato'
+import { contato } from '../data/contato.js'
 
 export default function Rodape() {
    return (
@@ -8,7 +8,12 @@ export default function Rodape() {
 
             <ul className='flex gap-4 items-end'>
                {contato.map((i) => (
-                  <Item key={i.id} link={i.link} nome={i.nome} img={i.icone} />
+                  <Item
+                     key={i.id}
+                     link={i.link}
+                     nome={i.nome}
+                     Icone={i.Icone}
+                  />
                ))}
             </ul>
          </div>
@@ -33,7 +38,7 @@ function Ferramentas({ nome }) {
    )
 }
 
-function Item({ link, img, nome }) {
+function Item({ link, Icone, nome }) {
    return (
       <li className='p-1.5 border-[0.5px] bg-[rgba(31,81,122,0.3)] hover:bg-[rgba(31,81,122,0.5)] rounded-md text-extra-branco cursor-pointer'>
          <a
@@ -43,7 +48,7 @@ function Item({ link, img, nome }) {
             className='flex items-center gap-2'
             aria-label={nome}
          >
-            <img src={img} alt='' className='w-5 invert' />
+            {<Icone />}
          </a>
       </li>
    )
