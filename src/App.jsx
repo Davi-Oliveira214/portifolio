@@ -9,11 +9,11 @@ export default function App() {
    return (
       <>
          <Hero />
-         <main className='flex-1 py-7'>
+         <main className='flex flex-col flex-1 py-7 gap-7'>
             <Skills />
-            <Sobre />
             <Projetos />
             <Educacao />
+            <Sobre />
          </main>
          <Rodape />
       </>
