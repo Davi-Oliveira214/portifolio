@@ -3,8 +3,8 @@ export default function CardFormacao({ infomacoes }) {
       infomacoes
 
    return (
-      <details className='flex flex-col w-full rounded-2xl border-[3px] border-deep-space-blue-800 overflow-hidden bg-deep-space-blue-900 text-extra-branco snap-center'>
-         <summary className='list-none flex flex-col px-3 py-2 bg-charcoal-blue-900 cursor-pointer'>
+      <details className='flex flex-col w-full rounded-2xl border-2 border-deep-space-blue-800 overflow-hidden bg-deep-space-blue-900 text-extra-branco snap-center'>
+         <summary className='list-none flex flex-col px-3 py-2 bg-[rgba(7,19,28,0.6)] cursor-pointer'>
             <div className='flex justify-between'>
                <PeriodoFormacao inicio={inicio} fim={fim} />
                <Status fim={fim} />
@@ -61,7 +61,7 @@ function PeriodoFormacao({ inicio, fim }) {
    )
 
    return (
-      <p className='w-max p-[3px_7px] text-sm text-deep-space-blue-700 bg-deep-space-blue-900 border-[3px] border-deep-space-blue-950 rounded-2xl mb-1'>
+      <p className='w-max p-[3px_7px] text-sm text-deep-space-blue-700 bg-deep-space-blue-900 border border-deep-space-blue-800 rounded-2xl mb-1'>
          {`${inicioData} - ${fimData}`}
       </p>
    )
@@ -72,7 +72,7 @@ function DescricaoFormacao({ texto }) {
 }
 
 function NomeInstituicao({ instituicao }) {
-   return <p className='font-bold text-lg'>{instituicao}</p>
+   return <p className='font-medium text-lg'>{instituicao}</p>
 }
 
 function NomeCurso({ curso }) {

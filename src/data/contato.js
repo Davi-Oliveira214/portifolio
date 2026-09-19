@@ -1,5 +1,3 @@
-import whatsapp from '../assets/svg/contato/whatsapp.svg'
-import instagram from '../assets/svg/contato/instagram.svg'
 import {
    IconBrandInstagram,
    IconBrandLinkedin,
