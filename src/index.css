@@ -33,11 +33,35 @@
       }
    }
 
+   @keyframes hidden-menu {
+      100% {
+         transform: translateX(105px);
+      }
+   }
+
+   @keyframes open-menu {
+      0% {
+         transform: translateX(105px);
+      }
+
+      100% {
+         transform: translateX(0);
+      }
+   }
+
+   --animate-abrirMenu: open-menu 1s forwards ease;
+
+   --animate-esconderMenu: hidden-menu 1s forwards ease;
+
    --animate-scrollInfinito: scroll-infinito 20s linear infinite;
 }
 
 @utility bordaPadrao {
    @apply border-2 border-deep-space-blue-700 rounded-2xl overflow-hidden;
+}
+
+html {
+   scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {

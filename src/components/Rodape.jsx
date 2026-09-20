@@ -2,7 +2,10 @@ import { contato } from '../data/contato.js'
 
 export default function Rodape() {
    return (
-      <footer className='flex flex-col w-full min-h-20 bg-deep-space-blue-900 px-3.5'>
+      <footer
+         className='flex flex-col w-full min-h-20 bg-deep-space-blue-900 px-3.5'
+         id='contato'
+      >
          <div className='flex justify-between gap-3 py-5'>
             <Logo />
 

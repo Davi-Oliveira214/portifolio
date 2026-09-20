@@ -5,8 +5,8 @@ import banner3 from '../assets/img/hero/banner3.png'
 
 export default function Hero() {
    return (
-      <section className='flex relative h-120'>
-         <div className='z-10 flex flex-col justify-evenly h-full w-full px-3 lg:px-5 py-7 md:w-[55%] rounded-br-full bg-deep-space-blue-900'>
+      <section className='flex relative h-120' id='inicio'>
+         <div className='z-10 flex flex-col justify-evenly h-full w-full px-3 lg:px-5 py-15 md:w-[55%] rounded-br-full bg-deep-space-blue-900'>
             <BannerDisponibilidade />
             <Apresentacao />
             <ListaTecnologias />
@@ -50,7 +50,7 @@ function MarcaDagua() {
       <div className='z-10 flex flex-col italic absolute bottom-0 right-3 md:bottom-7 md:right-7 font-bold text-extra-branco text-center text-3xl opacity-28'>
          <span>React</span>
          <span>&</span>
-         <span>Tailwindcss</span>
+         <span>Tailwind CSS</span>
       </div>
    )
 }
