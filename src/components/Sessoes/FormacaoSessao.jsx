@@ -6,7 +6,7 @@ export default function FormacaoSessao() {
    return (
       <div className='w-full my-2 px-4 '>
          <Titulo texto={'Formação'} />
-         <div className='flex px-2 py-3 gap-3 flex-wrap max-h-55 overflow-y-scroll scrollbar-thin scrollbar-thumb-deep-space-blue-900 snap-mandatory snap-y scroll-smooth'>
+         <div className='flex px-2 py-3 gap-3 flex-wrap max-h-60 overflow-y-scroll scrollbar-thin scrollbar-thumb-deep-space-blue-900 snap-mandatory snap-y scroll-smooth'>
             {formacao.map((f) => (
                <CardFormacao key={f.id} infomacoes={f} />
             ))}
