@@ -4,7 +4,7 @@ export default function CardProjeto({ item }) {
    const { titulo, descricao, linguagem, gitHub, imagem, visita } = item.sobre
 
    return (
-      <li className='w-90 h-87 bg-[rgba(31,81,122,0.12)] bordaPadrao'>
+      <li className='min-w-90 max-w-120 h-90 bg-[rgba(31,81,122,0.12)] bordaPadrao snap-center'>
          <article className='flex flex-col w-full h-full'>
             <div className='relative w-full h-40 overflow-hidden'>
                <img
@@ -12,57 +12,59 @@ export default function CardProjeto({ item }) {
                   alt={titulo}
                   className='h-full w-full object-cover object-top'
                />
-               <ListaLinguagens lista={linguagem} />
+               <ListaLinguagens linguagens={linguagem} />
             </div>
             <div className='flex flex-col gap-3 flex-1 w-full p-[15px_9px] text-extra-branco'>
-               <p className='text-2xl font-medium italic'>{titulo}</p>
+               <h3 className='text-2xl font-medium italic'>{titulo}</h3>
                <p className='text-lg w-full h-20 overflow-y-scroll scrollbar-thin scrollbar-thumb-deep-space-blue-900'>
                   {descricao}
                </p>
-               <ol className='flex gap-3 pt-2 border-t border-[rgba(255,255,255,0.12)]'>
-                  <Link
+               <ul className='flex gap-3 pt-2 border-t border-[rgba(255,255,255,0.12)]'>
+                  <LinkExterno
                      caminho={gitHub}
-                     texto={'GitHub'}
+                     texto='GitHub'
                      Icone={IconBrandGithub}
                   />
                   {visita && (
-                     <Link
+                     <LinkExterno
                         caminho={visita}
-                        texto={'Visitar'}
+                        texto='Visitar'
                         Icone={IconExternalLink}
                      />
                   )}
-               </ol>
+               </ul>
             </div>
          </article>
       </li>
    )
 }
 
-function ListaLinguagens({ lista }) {
+function ListaLinguagens({ linguagens }) {
    return (
-      <ul className='absolute flex items-end w-full h-full px-3.5 py-3 gap-2.5 bg-[rgba(31,81,122,0.2)] bottom-0'>
-         {lista.map((l) => (
-            <Item key={`id-${l}`} linguagem={l} />
+      <ul className='absolute flex items-end w-full overflow-x-scroll scrollbar-none h-full px-3.5 py-3 gap-2.5 bg-[rgba(31,81,122,0.2)] bottom-0'>
+         {linguagens.map((img, i) => (
+            <IconeLinguagem key={i} img={img} />
          ))}
       </ul>
    )
 }
 
-function Item({ linguagem }) {
+function IconeLinguagem({ img }) {
    return (
       <li className='border-2 border-deep-space-blue-800 bg-[rgba(15,39,59,0.8)] rounded-md px-4 py-0.5'>
-         <p className='text-[rgba(255,255,255,0.9)] font-bold text-lg whitespace-nowrap'>
-            {linguagem}
-         </p>
+         <img
+            src={img}
+            alt=''
+            className='w-7 object-cover brightness-0 invert'
+         />
       </li>
    )
 }
 
-function Link({ caminho, texto, Icone }) {
+function LinkExterno({ caminho, texto, Icone }) {
    return (
       <li className='flex items-center gap-1.5'>
-         {<Icone size={24} />}
+         <Icone size={24} />
          <a
             href={caminho}
             target='_blank'

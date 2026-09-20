@@ -1,4 +1,7 @@
-import foto from '../assets/img/img2.png'
+import { useEffect, useState } from 'react'
+import banner1 from '../assets/img/hero/banner1.png'
+import banner2 from '../assets/img/hero/banner2.png'
+import banner3 from '../assets/img/hero/banner3.png'
 
 export default function Hero() {
    return (
@@ -53,13 +56,33 @@ function MarcaDagua() {
 }
 
 function ImagemFundo() {
+   const imagens = [banner1, banner2, banner3]
+   const [indice, setIndice] = useState(0)
+
+   useEffect(() => {
+      const intervalo = setInterval(
+         () => setIndice((prev) => (prev + 1) % imagens.length),
+         5500,
+      )
+
+      return () => clearInterval(intervalo)
+   }, [])
+
    return (
-      <div className='absolute w-full h-full'>
-         <img
-            src={foto}
-            alt=''
-            className='hidden md:flex z-0 w-full h-full object-cover'
-         />
+      <div className='absolute w-full h-full overflow-hidden'>
+         <div
+            className='hidden md:flex h-full transition-transform duration-2000 ease-in-out'
+            style={{ transform: `translateX(-${indice * 100}%)` }}
+         >
+            {imagens.map((img, i) => (
+               <img
+                  key={i}
+                  src={img}
+                  alt=''
+                  className='z-0 w-full h-full object-cover shrink-0'
+               />
+            ))}
+         </div>
          <div className='absolute w-full h-full z-0 bg-linear-to-t from-deep-space-blue-950 bottom-0' />
       </div>
    )
@@ -75,8 +98,8 @@ function Apresentacao() {
             Estudante FullStack
          </p>
          <p className='mt-5 max-w-80 lg:max-w-96 text-sm sm:text-base wrap-break-word text-extra-branco/65 leading-relaxed'>
-            Desenvolvedor apaixonado por tecnologia, criando interfaces modernas
-            e aplicações web funcionais.
+            Estudante da Fatec Itaquera focado em backend com Java e Spring
+            Boot, criando frontends modernos com React e Tailwind CSS.
          </p>
       </div>
    )

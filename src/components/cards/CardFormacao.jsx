@@ -31,8 +31,8 @@ function Status({ fim }) {
    const concluido = dataAtual >= fim
 
    let style = concluido
-      ? 'text-hunter-green-700 bg-[rgba(36,66,54,0.2)] border-hunter-green-800'
-      : 'text-charcoal-blue-950 bg-[rgba(255,255,255,0.2)] border-charcoal-blue-950'
+      ? 'text-hunter-green-700 bg-[rgba(43,59,43,0.3)] border-hunter-green-700'
+      : 'text-deep-space-blue-700 bg-[rgba(31,81,122,0.2)] border-deep-space-blue-800'
 
    return (
       <p

@@ -7,7 +7,7 @@ export const formacao = [
       fim: '2026-06',
       curso: 'Técnico em Desenvolvimento de Sistemas (DS)',
       descricao:
-         'Curso técnico em desenvolvimento de sistema, com lógica de programação, desenvolvimento web e banco de dados relacionais.',
+         'Curso técnico voltado para o desenvolvimento de sistemas, com foco em lógica de programação, desenvolvimento web, banco de dados relacionais e boas práticas de programação.',
       aprendizados: ['Java', 'Html', 'CSS', 'JS', 'PHP', 'SQl', 'MySql'],
    },
    {
@@ -18,7 +18,7 @@ export const formacao = [
       fim: '2029-06',
       curso: 'Desenvolvimento de Software Multiplataforma (DSM)',
       descricao:
-         'Tecnólogo em desenvolvimento de software para múltiplas plataformas, abrangendo desenvolvimento web, mobile, banco de dados e arquitetura de sistemas.',
+         'Tecnólogo focado na criação de soluções para diferentes plataformas, cobrindo desenvolvimento web, mobile, banco de dados, arquitetura de sistemas e metodologias ágeis.',
       aprendizados: ['Html', 'CSS', 'JS'],
    },
 ]

@@ -2,33 +2,34 @@ import { useState } from 'react'
 
 export default function CardLinguagem({ info }) {
    const { nome, img, sobre, cor } = info
-   const [aberto, setAberto] = useState(false)
+   const [hover, setHover] = useState(false)
 
    return (
-      <div
-         className='relative flex group w-48'
-         onMouseEnter={() => setAberto(true)}
-         onMouseLeave={() => setAberto(false)}
-         onTouchStart={() => setAberto(!aberto)}
+      <article
+         className='relative w-55 py-3 px-2 bg-charcoal-blue-900 rounded-2xl'
+         onMouseEnter={() => setHover(true)}
+         onMouseLeave={() => setHover(false)}
+         onTouchStart={() => setHover((prev) => !prev)}
       >
-         <div className='flex flex-col w-full bg-charcoal-blue-900 py-2 gap-2.5 rounded-2xl'>
-            <img src={img} alt='' className='mx-auto w-24' />
-            <p className='text-2xl text-extra-branco text-center font-bold'>
+         <figure className='flex flex-col items-center gap-2.5'>
+            <img src={img} alt={nome} className='w-24' />
+            <figcaption className='text-2xl text-extra-branco font-bold'>
                {nome}
-            </p>
-         </div>
-         <Info linguagem={nome} sobre={sobre} cor={cor} aberto={aberto} />
-      </div>
+            </figcaption>
+         </figure>
+         <Tooltip nome={nome} sobre={sobre} cor={cor} visivel={hover} />
+      </article>
    )
 }
 
-function Info({ linguagem, sobre, cor, aberto }) {
+function Tooltip({ nome, sobre, cor, visivel }) {
    return (
       <div
-         className={`absolute ${aberto ? 'flex' : 'hidden'} flex-col justify-center inset-0 bg-charcoal-blue-900 px-1.5 gap-2.5 rounded-2xl`}
+         role='tooltip'
+         className={`absolute inset-0 ${visivel ? 'flex' : 'hidden'} flex-col justify-center gap-2.5 bg-charcoal-blue-900 rounded-2xl`}
       >
          <p className='text-center text-xl font-bold' style={{ color: cor }}>
-            {linguagem}
+            {nome}
          </p>
          <p className='text-center text-extra-branco text-sm'>{sobre}</p>
       </div>

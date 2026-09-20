@@ -8,25 +8,25 @@ import {
 export const contato = [
    {
       id: 1,
-      link: '',
+      link: 'https://wa.me/11945678221',
       nome: 'whatsapp',
       Icone: IconBrandWhatsapp,
    },
    {
       id: 2,
-      link: '',
+      link: 'https://www.instagram.com/d4visantos_?stkn=MW10MXl3cGdlaXczNw==',
       nome: 'instagram',
       Icone: IconBrandInstagram,
    },
    {
       id: 3,
-      link: '',
+      link: 'https://www.linkedin.com/in/davi-de-jesus-santos-oliveira-740b37373',
       nome: 'linkedln',
       Icone: IconBrandLinkedin,
    },
    {
       id: 4,
-      link: '',
+      link: 'mailto:davi.santosoliveira214@gmail.com',
       nome: 'email',
       Icone: IconBrandGmail,
    },

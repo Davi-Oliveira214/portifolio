@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
-import foto from '../../assets/img/foto.jpg'
-import img2 from '../../assets/img/img2.png'
-import livraria from '../../assets/img/livraria.png'
+import banner1 from '../../assets/img/hero/banner1.png'
+import banner2 from '../../assets/img/hero/banner2.png'
+import banner3 from '../../assets/img/hero/banner3.png'
+import livraria from '../../assets/img/projetos/livraria.png'
 import Titulo from '../Titulos.jsx'
 import { sobre } from '../../data/sobre.js'
 
@@ -16,7 +17,7 @@ export default function SobreSessao() {
 }
 
 function FotoPerfil() {
-   const imagens = [foto, img2, livraria]
+   const imagens = [banner1, banner2, banner3, livraria]
    const [indiceAtual, setIndiceAtual] = useState(0)
 
    useEffect(() => {
@@ -24,6 +25,7 @@ function FotoPerfil() {
          () => setIndiceAtual((prev) => (prev + 1) % imagens.length),
          3000,
       )
+
       return () => clearInterval(intervalo)
    }, [])
 
@@ -34,7 +36,7 @@ function FotoPerfil() {
                key={i}
                src={img}
                alt='Foto de perfil'
-               className={`absolute inset-0 h-full w-full object-cover object-[20%_30%] transition-opacity duration-1000 ease-in-out ${
+               className={`absolute inset-0 h-full w-full object-cover object-[0%_25%] transition-opacity duration-1000 ease-in-out ${
                   i === indiceAtual ? 'opacity-100' : 'opacity-0'
                }`}
             />
