@@ -36,6 +36,10 @@
    --animate-scrollInfinito: scroll-infinito 20s linear infinite;
 }
 
+@utility bordaPadrao {
+   @apply border-2 border-deep-space-blue-700 rounded-2xl overflow-hidden;
+}
+
 body::-webkit-scrollbar {
    scrollbar-width: none;
 }

@@ -28,7 +28,7 @@ function FotoPerfil() {
    return (
       <div className='flex flex-col w-full md:flex-row gap-5'>
          <TextoCard />
-         <div className='relative w-full md:w-full h-100 rounded-2xl overflow-hidden border-2 border-deep-space-blue-800'>
+         <div className='relative w-full md:w-full h-100 bordaPadrao'>
             {imagens.map((img, i) => (
                <img
                   key={i}

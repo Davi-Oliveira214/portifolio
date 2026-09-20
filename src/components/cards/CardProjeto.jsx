@@ -4,7 +4,7 @@ export default function CardProjeto({ item }) {
    const { titulo, descricao, linguagem, gitHub, imagem, visita } = item.sobre
 
    return (
-      <li className='w-90 h-87 overflow-hidden rounded-2xl bg-[rgba(31,81,122,0.12)] border-[3px] border-deep-space-blue-800'>
+      <li className='w-90 h-87 bg-[rgba(31,81,122,0.12)] bordaPadrao'>
          <article className='flex flex-col w-full h-full'>
             <div className='relative w-full h-40 overflow-hidden'>
                <img

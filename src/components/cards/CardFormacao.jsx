@@ -3,7 +3,7 @@ export default function CardFormacao({ infomacoes }) {
       infomacoes
 
    return (
-      <details className='flex flex-col w-full rounded-2xl border-2 border-deep-space-blue-800 overflow-hidden bg-deep-space-blue-900 text-extra-branco snap-center'>
+      <details className='flex flex-col w-full bordaPadrao bg-deep-space-blue-900 text-extra-branco snap-center'>
          <summary className='list-none flex flex-col px-3 py-2 bg-[rgba(7,19,28,0.6)] cursor-pointer'>
             <div className='flex justify-between'>
                <PeriodoFormacao inicio={inicio} fim={fim} />
