@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import banner1 from '../assets/img/hero/banner1.png'
 import banner2 from '../assets/img/hero/banner2.png'
 import banner3 from '../assets/img/hero/banner3.png'
+import { IconArrowNarrowRight } from '@tabler/icons-react'
 
 export default function Hero() {
    return (
@@ -10,6 +11,13 @@ export default function Hero() {
             <BannerDisponibilidade />
             <Apresentacao />
             <ListaTecnologias />
+            <a
+               href='#contato'
+               className='mt-5 text-xs flex items-center gap-2.5 w-max px-2.5 py-0.5 rounded-full bordaPadrao border-hunter-green-700 bg-deep-space-blue-900/60 font-medium italic text-extra-branco transition-all duration-300 hover:-translate-y-0.5 hover:bg-hunter-green-800/40'
+            >
+               Entre em contato
+               <IconArrowNarrowRight />
+            </a>
          </div>
          <MarcaDagua />
          <ImagemFundo />
