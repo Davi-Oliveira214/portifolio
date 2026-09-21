@@ -1,4 +1,5 @@
 import { IconExternalLink, IconBrandGithub } from '@tabler/icons-react'
+import { getLinguagem } from '../../data/techs'
 
 export default function CardProjeto({ item }) {
    const { titulo, descricao, linguagem, gitHub, imagem, visita } = item.sobre
@@ -42,9 +43,11 @@ export default function CardProjeto({ item }) {
 }
 
 function ListaLinguagens({ linguagens }) {
+   const lista = getLinguagem(linguagens)
+
    return (
       <ul className='absolute flex items-end w-full overflow-x-scroll scrollbar-none h-full px-3.5 py-3 gap-2.5 bg-[rgba(31,81,122,0.2)] bottom-0'>
-         {linguagens.map((img, i) => (
+         {lista.map((img, i) => (
             <IconeLinguagem key={i} img={img} />
          ))}
       </ul>

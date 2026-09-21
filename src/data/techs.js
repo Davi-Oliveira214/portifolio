@@ -97,3 +97,7 @@ export const linguagens = [
       cor: '#FFFFFF',
    },
 ]
+
+export function getLinguagem(ids) {
+   return ids.map((id) => linguagens.find((l) => l.id === id).img)
+}
