@@ -21,7 +21,7 @@ export default function Rodape() {
             </ul>
          </div>
 
-         <div className='flex justify-between border-t border-[rgba(255,255,255,0.12)] py-2.5'>
+         <div className='flex justify-between items-center border-t border-[rgba(255,255,255,0.12)] py-2.5'>
             <p className='text-[rgba(255,255,255,0.3)]'>2026 Davi. Oliveira</p>
             <ul className='flex gap-3'>
                <Ferramentas nome={'react'} />
@@ -35,7 +35,7 @@ export default function Rodape() {
 
 function Ferramentas({ nome }) {
    return (
-      <li className='px-2 py-0.5 rounded-md border-[0.5px] border-[rgba(31,81,122,0.9)]'>
+      <li className='px-2 py-0.5 w-max h-max rounded-md border-[0.5px] border-[rgba(31,81,122,0.9)]'>
          <p className='capitalize text-[rgba(31,81,122,0.7)] text-sm'>{nome}</p>
       </li>
    )

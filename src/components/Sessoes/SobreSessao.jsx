@@ -83,9 +83,9 @@ function GridSobre() {
                   key={id}
                   className={`${bordaClasse} md:bordaPadrao border-deep-space-blue-800 bg-[rgba(31,81,122,0.12)] px-4 py-3`}
                >
-                  <p className='text-3xl text-extra-branco text-center mb-2'>
+                  <h3 className='text-3xl text-extra-branco text-center mb-2'>
                      {titulo}
-                  </p>
+                  </h3>
                   <p className='text-extra-branco/85 text-lg leading-relaxed'>
                      {texto}
                   </p>

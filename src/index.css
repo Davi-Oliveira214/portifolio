@@ -69,11 +69,12 @@ body::-webkit-scrollbar {
 }
 
 body {
-   font-family: 'Inter', sans-serif;
+   font-family: 'Outfit';
 }
 
 h1,
 h2,
-h3 {
-   font-family: 'Space Grotesk', sans-serif;
+h3,
+.fonte {
+   font-family: 'exo 2';
 }

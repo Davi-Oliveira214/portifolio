@@ -4,9 +4,9 @@ export default function CardProjeto({ item }) {
    const { titulo, descricao, linguagem, gitHub, imagem, visita } = item.sobre
 
    return (
-      <li className='max-md:min-w-[calc(100vw-40px)] min-w-120 max-w-120 h-90 bg-[rgba(31,81,122,0.12)] bordaPadrao snap-center'>
-         <article className='flex flex-col w-full h-full'>
-            <div className='relative w-full h-40 overflow-hidden'>
+      <li className='h-90 md:h-70 bg-[rgba(31,81,122,0.12)] bordaPadrao snap-center'>
+         <article className='flex flex-col md:flex-row w-full h-full'>
+            <div className='relative w-full h-40 md:h-full md:w-[45%] overflow-hidden'>
                <img
                   src={imagem}
                   alt={titulo}
@@ -14,9 +14,11 @@ export default function CardProjeto({ item }) {
                />
                <ListaLinguagens linguagens={linguagem} />
             </div>
-            <div className='flex flex-col gap-3 flex-1 w-full p-[15px_9px] text-extra-branco'>
-               <h3 className='text-2xl font-medium italic'>{titulo}</h3>
-               <p className='text-lg w-full h-20 overflow-y-scroll scrollbar-thin scrollbar-thumb-deep-space-blue-900'>
+            <div className='flex flex-col gap-3 flex-1 w-full p-[15px_9px] text-extra-branco/50'>
+               <h3 className='text-2xl font-bold italic text-extra-branco'>
+                  {titulo}
+               </h3>
+               <p className='text-lg w-full h-20 md:flex-1 overflow-y-scroll scrollbar-thin scrollbar-thumb-deep-space-blue-900 rounded-sm'>
                   {descricao}
                </p>
                <ul className='flex gap-3 pt-2 border-t border-[rgba(255,255,255,0.12)]'>
@@ -55,7 +57,7 @@ function IconeLinguagem({ img }) {
          <img
             src={img}
             alt=''
-            className='w-7 object-cover brightness-0 invert'
+            className='min-w-7 object-cover brightness-0 invert'
          />
       </li>
    )
