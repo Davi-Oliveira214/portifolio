@@ -49,11 +49,22 @@
       }
    }
 
+   @keyframes borda-giratoria {
+      0% {
+         transform: rotate(0deg);
+      }
+      100% {
+         transform: rotate(360deg);
+      }
+   }
+
    --animate-abrirMenu: open-menu 1s forwards ease;
 
    --animate-esconderMenu: hidden-menu 1s forwards ease;
 
    --animate-scrollInfinito: scroll-infinito 20s linear infinite;
+
+   --animate-girar: borda-giratoria 5s linear infinite;
 }
 
 @utility bordaPadrao {
