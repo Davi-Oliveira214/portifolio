@@ -1,5 +1,6 @@
 import livraria from '../assets/img/projetos/livraria.png'
 import restaurante from '../assets/img/projetos/restaurante.png'
+import mailService from '../assets/img/projetos/mail-service.png'
 
 export const projetos = [
    {
@@ -40,6 +41,24 @@ export const projetos = [
          gitHub: 'https://github.com/Davi-Oliveira214/Restaurante-Java-React',
 
          imagem: restaurante,
+
+         visita: '',
+      },
+   },
+   {
+      projeto: 'mail-service',
+
+      sobre: {
+         titulo: 'Mail Service API',
+
+         descricao:
+            'Microserviço em Spring Boot para o envio de e-mails de contacto. Com suporte a CORS configurável no frontend. Containerizado com Docker.',
+
+         linguagem: ['java', 'spring_boot'],
+
+         gitHub: 'https://github.com/Davi-Oliveira214/mail-service',
+
+         imagem: mailService,
 
          visita: '',
       },
