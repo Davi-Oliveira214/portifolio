@@ -14,7 +14,7 @@ export const contato = [
    },
    {
       id: 2,
-      link: 'https://www.instagram.com/d4visantos_?stkn=MW10MXl3cGdlaXczNw==',
+      link: 'https://www.instagram.com/davi.oliveiradev?stkn=azJzcWQ2ajZyNWJ6',
       nome: 'instagram',
       Icone: IconBrandInstagram,
    },
