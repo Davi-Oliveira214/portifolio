@@ -60,7 +60,7 @@ function IconeLinguagem({ img }) {
          <img
             src={img}
             alt=''
-            className='min-w-7 object-cover brightness-0 invert'
+            className='min-w-7 object-cover'
          />
       </li>
    )
