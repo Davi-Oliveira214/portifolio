@@ -25,7 +25,7 @@ export const projetos = [
 
       visita: 'https://davi-oliveira214.github.io/sempre-mei/',
    },
-}
+},
 
    {
       projeto: 'Livraria Java',
