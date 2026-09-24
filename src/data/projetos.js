@@ -1,8 +1,32 @@
 import livraria from '../assets/img/projetos/livraria.png'
 import restaurante from '../assets/img/projetos/restaurante.png'
 import mailService from '../assets/img/projetos/mail-service.png'
+import sempreMei from '../assets/img/projetos/sempre_mei.png'
 
 export const projetos = [
+{
+   projeto: 'sempre-mei',
+
+   sobre: {
+      titulo: 'Sempre MEI',
+
+      descricao:
+         'Página web institucional desenvolvida para a divulgação de serviços para Microempreendedores Individuais (MEI). O projeto apresenta uma interface moderna, clara e objetiva para destacar soluções.',
+
+      linguagem: [
+         'html',
+         'css',
+         'java_script',
+      ],
+
+      gitHub: 'https://github.com/Davi-Oliveira214/sempre-mei',
+
+      imagem: sempreMei,
+
+      visita: 'https://davi-oliveira214.github.io/sempre-mei/',
+   },
+}
+
    {
       projeto: 'Livraria Java',
 
