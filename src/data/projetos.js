@@ -14,9 +14,9 @@ export const projetos = [
          'Página web institucional desenvolvida para a divulgação de serviços para Microempreendedores Individuais (MEI). O projeto apresenta uma interface moderna, clara e objetiva para destacar soluções.',
 
       linguagem: [
-         'html',
-         'css',
-         'java_script',
+         'html5',
+         'css3',
+         'javascript',
       ],
 
       gitHub: 'https://github.com/Davi-Oliveira214/sempre-mei',
